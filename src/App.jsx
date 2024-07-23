@@ -1,16 +1,15 @@
-// import { Button } from "@mui/material";
 import { Box } from "@mui/material";
 import "./App.css";
-import Header from "./components/Header";
 import Home from "./pages/Home";
-// import Navbar from "./components/Navbar";
-
+import { Route, Routes } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar";
 function App() {
   return (
     <Box>
-      <Header />
-      <Home />
-      {/* <Navbar /> */}
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Box>
   );
 }
