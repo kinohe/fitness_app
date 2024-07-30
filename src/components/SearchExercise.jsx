@@ -20,7 +20,7 @@ function SearchExercise({ setBodyPart, bodyPart, setExercise }) {
   const handleSearch = async () => {
     if (search) {
       const exerciseData = fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises?limit=100&offset=0",
+        "https://exercisedb.p.rapidapi.com/exercises?limit=10&offset=0",
         exerciseOption
       );
       const searchedExercise = exerciseData.filter(
@@ -66,14 +66,14 @@ function SearchExercise({ setBodyPart, bodyPart, setExercise }) {
         <Button
           className="search-btn"
           sx={{
-            bgcolor: "#FF2625",
+            backgroundColor: "#FF2625",
             color: "#fff",
             textTransform: "none",
             width: { lg: "175px", xs: "80px" },
             fontSize: { lg: "20px", xs: "14px" },
             height: "56px",
             position: "absolute",
-            right: "0",
+            // right: "0",
           }}
           onClick={handleSearch}
         >
